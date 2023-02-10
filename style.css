@@ -22,12 +22,21 @@ body {
 }
 
 .row{
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    display: flex;
+    grid-template-rows: 1fr 1fr 2fr;
 }
 
 #input{
     display: flex;
     padding: 10px;
     justify-content: space-around;
+}
+
+#bar{
+margin: 10px;
+background-color: bisque;
+}
+.newBars{
+    border-left: 6px solid yellow;
+    margin: 3px;
 }
