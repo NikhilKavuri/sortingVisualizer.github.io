@@ -46,7 +46,28 @@
 
 <body class="p-3 mb-2 bg-dark text-white">
 
-    <div id="bars" class="flex-container"></div>
+    <div id="bars" class="flex-container">
+        <script>
+            const newArrayBtn = document.getElementById("newArray");
+            const bars = document.getElementById("bars");
+            const generateArray = () => {
+                const array = Array.from({length: 100}, () => Math.floor(Math.random() * 100));
+                return array;
+            };
+            const createBars = () => {
+                const array = generateArray();
+                bars.innerHTML = "";
+                for (let i = 0; i <= array.length; i++) {
+                    const bar = document.createElement("div");
+                    bar.classList.add("bar");
+                    bar.style.height = `${array[i]*5}px`;
+                    bars.appendChild(bar);
+                }
+            };
+            newArrayBtn.addEventListener("click", createBars);
+            createBars();
+        </script>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
