@@ -43,7 +43,7 @@ background-color: bisque;
 .bar{ 
     width: 4px;
     height: 10px;
-    background-color: rgb(105, 122, 9);
+    background-color: rgb(246, 255, 0);
     margin: 2px;
     float: left;
     display:flex;
